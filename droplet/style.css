@@ -1,0 +1,117 @@
+/* MAIN */
+.blob{
+    height: 150px;
+    width: 150px;
+    border-radius: 58% 43% 33% 64%/50% 38% 53% 50%;
+    background: transparent;
+    box-shadow: inset 6px 33px 20px 0 #c9c9c9, inset 20px 80px 15px 0 #e0e0e0, 10px 20px 20px 0px #c9c9c9;
+}
+.blob2{
+    height: 100px;
+    width: 100px;
+    border-radius: 58% 43% 33% 64%/50% 38% 53% 50%;
+    background: transparent;
+    box-shadow: inset 6px 33px 20px 0 #00ffff, inset 20px 80px 15px 0 #0091d0, 10px 20px 20px 0px #00498e;
+}
+.blob3{
+    height: 70px;
+    width: 70px;
+    border-radius: 58% 43% 33% 64%/50% 38% 53% 50%;
+    background: transparent;
+    box-shadow: inset 6px 33px 20px 0 #00ffff, inset 20px 50px 15px 0 #0091d0, 5px 10px 10px 0px #00498e;
+}
+
+/* BEFORE */
+.blob::before{
+    content: '';
+    position: absolute;
+    border-radius: 37% 54% 46% 46%;
+    background: white;
+    width: 50px;
+    transform: rotate(-30deg);
+    height: 15px;
+    top: 25px;
+    left: 25px;
+}
+.blob2::before{
+    content: '';
+    position: absolute;
+    border-radius: 37% 94% 46% 96%;
+    background: rgb(255, 255, 255);
+    width: 40px;
+    transform: rotate(-30deg);
+    height: 15px;
+    top: 165px;
+    left: 25px;
+}
+.blob3::before{
+    content: '';
+    position: absolute;
+    border-radius: 37% 94% 46% 96%;
+    background: rgb(255, 255, 255);
+    height: 10px;
+    width: 30px;
+    transform: rotate(-30deg);
+    top: 265px;
+    left: 20px;
+}
+
+
+
+/* AFTER */
+.blob::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    width: 10px;
+    height: 10px;
+    top: 60px;
+    left: 20px;
+}
+.blob2::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    width: 8px;
+    height: 8px;
+    top: 185px;
+    left: 20px;
+}
+.blob3::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    width: 6px;
+    height: 6px;
+    top: 280px;
+    left: 15px;
+}
+
+
+
+
+
+/* ANIMATION SHAKE */
+.blob:hover{
+    animation:  shake 1s  ;
+}
+  
+@keyframes shake
+{
+    0%{
+      transform: translateX(0)
+    }
+    25%{
+      transform: translateX(25px);
+    }
+      
+    50%{
+      transform: translateX(-25px);
+    }
+    100%{
+      transform: translateX(0px);
+    }
+}
